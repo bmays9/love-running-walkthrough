@@ -85,7 +85,7 @@ main {
     height: 600px;
     width: 100%;
     background: url("../images/hero-img.png") no-repeat center center/cover;
-    position: relative; # relative to parent
+    position: relative; /*# relative to parent */
 }
 
 #cover-text {
@@ -101,17 +101,46 @@ main {
     
 }
 
+#cover-text > h2, #cover-text > h3 {
+    color: #ffffff;
+}
 
-    #cover-text > h2, #cover-text > h3 {
-        color: #ffffff;
-    }
-    /* Footer */
-    #social-networks {
+/* Reasons Section*/
+hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+#reasons {
+    margin: 20px auto;
+    width: 90%;
+}
+
+#reasons h2 {
+        font-size: 280%;
+        margin-bottom: 20px;
         text-align: center;
-        padding: 20px 0;
-        display: flex;
-        justify-content: space-evenly;
-        list-style-type: none;
+}
+
+#benefits-physical > div, #benefits-mental > div {
+    line-height: 20px;
+    margin-bottom: 20px
+}
+
+#benefits-physical p, #benefits-mental p {
+    padding: 0 20px;
+   
+}
+
+
+
+/* Footer */
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
     }
 
 
@@ -150,20 +179,19 @@ main {
 
     #menu {
         display: flex;
-
     }
 
     #menu > li {
-        padding-left: 1rem;
+            padding-left: 1rem;
     }
-    
+
     .nav-toggle-label {
         display: none;
     }
 
     #logo {
         font-size: 200%;
-        line-height:75px;
+        line-height: 75px;
         margin: 0, 0.5rem;
     }
 
@@ -174,18 +202,18 @@ main {
     }
 
     /*Hero*/
-    #cover-text{
-        width:300px;
+    #cover-text {
+        width: 300px;
         right: 50px; /* position to the right*/
+    }
 
+
+    /* Media Query: laptops and larger 992px and upwards*/
+    @media screen and (min-width: 992px) {
+        /* Anchors */
+
+        #menu a:hover {
+            border-bottom: 1px solid #3a3a3a;
+        }
     }
 }
-
-/* Media Query: laptops and larger 992px and upwards*/
-@media screen and (min-width: 992px) {
-    /* Anchors */
-
-    #menu a:hover {
-        border-bottom: 1px solid #3a3a3a;
-       
-    }
