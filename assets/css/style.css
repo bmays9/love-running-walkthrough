@@ -80,9 +80,15 @@ main {
 }
 
 /* Footer */
-footer {
-    background-color: orange;
+#social-networks{
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type:none;
 }
+
+
 
 .active {
     border-bottom:1px solid #3a3a3a;
@@ -97,6 +103,12 @@ footer {
 
 #menu > li {
     margin-bottom: 1em;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
 }
 
 /* Media Query: tablets and larger 769px and upwards*/
