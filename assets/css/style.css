@@ -132,10 +132,25 @@ hr {
    
 }
 
+#circle-cover-bg {
+    height: 90vw;
+    width: 90vw;
+    background: url("../images/reasons-image.png") no-repeat center center/cover;
+    border: 2px solid darkred;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
 
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-/* Footer */
-#social-networks {
+    /* Footer */
+    #social-networks {
     text-align: center;
     padding: 20px 0;
     display: flex;
