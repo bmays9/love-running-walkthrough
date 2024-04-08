@@ -177,8 +177,19 @@ hr {
 }
 
 
+/* Gallery Styles */
 
-    /* Footer */
+#photos img {
+
+    width: 100%;
+    line-height: 1em;   /* allows space for alt text*/
+}
+
+#photos {
+    line-height: 0;
+}
+
+/* Footer */
     #social-networks {
     text-align: center;
     padding: 20px 0;
@@ -210,6 +221,17 @@ hr {
     color: #3a3a3a;
 }
 
+
+
+/* Media Query: landscape phones and larger 576px and upwards*/
+@media screen and (min-width: 576px) {
+
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
+
 /* Media Query: tablets and larger 769px and upwards*/
 @media screen and (min-width: 768px) {
     /* Header */
@@ -225,9 +247,9 @@ hr {
         display: flex;
     }
 
-    #menu > li {
+        #menu > li {
             padding-left: 1rem;
-    }
+        }
 
     .nav-toggle-label {
         display: none;
@@ -238,6 +260,8 @@ hr {
         line-height: 75px;
         margin: 0, 0.5rem;
     }
+
+
 
     /* Main content*/
     main {
@@ -258,29 +282,39 @@ hr {
         width: 100%;
     }
 
-    #benefits-physical > div, #benefits-mental > div {
+        #benefits-physical > div, #benefits-mental > div {
             width: 75%;
-            
+        }
+
+        #benefits-mental > div {
+            text-align: end; /* align text to right*/
+            align-self: flex-end; /* align divs themselves to the right*/
+        }
+
+    /* Gallery */
+    #photos {
+        column-count: 3;
+        column-gap: 0;
     }
 
-    #benefits-mental > div {
-        text-align: end;        /* align text to right*/
-        align-self: flex-end;   /* align divs themselves to the right*/
-
-    }
-
-    
-
+}
 
     /* Media Query: laptops and larger 992px and upwards*/
-    @media screen and (min-width: 992px) {
-        /* Anchors */
+@media screen and (min-width: 992px) {
+    /* Anchors */
 
-        #menu a:hover {
-            border-bottom: 1px solid #3a3a3a;
-        }
-    
-        }
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+    }
+
+    /* Gallery */
+    #photos {
+        column-count: 4;
+        column-gap: 0;
+    }
+
+}
+
 
     /* Media Query: laptops and larger 1200px and upwards*/
     @media screen and (min-width: 1200px) {
@@ -297,22 +331,20 @@ hr {
         #benefits > div {
             flex: 1;
         }
-        
+
         #benefits-mental {
             order: 1;
-            
         }
 
-        #benefits-mental > div {
-            align-self: flex-start;
-        }
+            #benefits-mental > div {
+                align-self: flex-start;
+            }
 
         #benefits-physical > div {
             align-self: flex-end;
         }
+    }
 
-        }
-    } 
     
     
     
