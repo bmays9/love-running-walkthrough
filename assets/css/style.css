@@ -222,6 +222,24 @@ hr {
         right: 50px; /* position to the right*/
     }
 
+    /* Reasons section*/
+    #benefits-physical, #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #benefits-physical > div, #benefits-mental > div {
+            width: 75%;
+            
+    }
+
+    #benefits-mental > div {
+        text-align: end;        /* align text to right*/
+        align-self: flex-end;   /* align divs themselves to the right*/
+
+    }
+
 
     /* Media Query: laptops and larger 992px and upwards*/
     @media screen and (min-width: 992px) {
@@ -230,5 +248,42 @@ hr {
         #menu a:hover {
             border-bottom: 1px solid #3a3a3a;
         }
+    
+        }
+
+    /* Media Query: laptops and larger 1200px and upwards*/
+    @media screen and (min-width: 1200px) {
+        /* benefits alignment */
+        #benefits {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #benefits-image {
+            order: 0;
+        }
+
+        #benefits > div {
+            flex: 1;
+        }
+        
+        #benefits-mental {
+            order: 1;
+            
+        }
+
+        #benefits-mental > div {
+            align-self: flex-start;
+        }
+
+        #benefits-physical > div {
+            align-self: flex-end;
+        }
+
+        }
+    } 
+    
+    
+    
+    
     }
-}
